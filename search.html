@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/search" method="post" class="form-group">
+    <label for="query">Suche:</label>
+    <input type="text" id="query" name="query" required class="form-control mb-3">
+    <button type="submit" class="btn btn-primary">Suchen</button>
+</form>
+
+{% if contacts %}
+<ul class="list-group">
+    {% for contact in contacts %}
+    <li class="list-group-item">{{ contact.name }} - {{ contact.phone }} - {{ contact.email }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

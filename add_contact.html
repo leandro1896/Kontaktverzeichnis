@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/add" method="post" class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required class="form-control mb-3">
+
+    <label for="phone">Telefonnummer:</label>
+    <input type="tel" id="phone" name="phone" required class="form-control mb-3">
+
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email" class="form-control mb-3">
+
+    <button type="submit" class="btn btn-primary">Kontakt hinzufügen</button>
+</form>
+{% endblock %}

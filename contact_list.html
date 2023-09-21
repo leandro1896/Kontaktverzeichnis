@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Kontakte</h2>
+<ul class="list-group">
+    {% for contact in contacts %}
+    <li class="list-group-item">{{ contact.name }} - {{ contact.phone }} - {{ contact.email }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('add_contact') }}" class="btn btn-primary mt-3">Kontakt hinzufügen</a>
+<a href="{{ url_for('logout') }}" class="btn btn-secondary mt-3">Abmelden</a>
+{% endblock %}
